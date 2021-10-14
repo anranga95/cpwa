@@ -1,0 +1,7 @@
+{
+  "name": "cpwa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
