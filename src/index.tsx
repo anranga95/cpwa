@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import { ContractKitProvider } from '@celo-tools/use-contractkit';
+import '@celo-tools/use-contractkit/lib/styles.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ContractKitProvider
+      dapp={{
+        name: 'My awesome dApp',
+        description: 'My awesome description',
+        url: 'https://example.com',
+        icon: '/assets/icon/favicon.png'
+      }}
+    >
+      <App />
+    </ContractKitProvider>,
   document.getElementById('root')
 );
 
